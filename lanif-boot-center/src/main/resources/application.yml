@@ -1,0 +1,11 @@
+spring:
+    application:
+        name: lanif-boot-center
+
+server:
+    port: 8761 #启动端口
+
+eureka:
+    client:
+        registerWithEureka: false
+        fetchRegistry: false
