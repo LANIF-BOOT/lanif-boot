@@ -3,15 +3,15 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.lanif</groupId>
-		<artifactId>lanif-boot</artifactId>
+		<artifactId>lanif-boot-modules</artifactId>
 		<version>1.0.0</version>
 	</parent>
-	<artifactId>lanif-boot-modules</artifactId>
-	<packaging>pom</packaging>
+	<artifactId>lanif-boot-interface</artifactId>
 
-	<modules>
-		<module>lanif-boot-admin</module>
-		<module>lanif-boot-generator</module>
-		<module>lanif-boot-interface</module>
-	</modules>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+	</dependencies>
 </project>
