@@ -11,7 +11,5 @@
 
 	<modules>
 		<module>lanif-boot-admin</module>
-		<module>lanif-boot-generator</module>
-		<module>lanif-boot-interface</module>
 	</modules>
 </project>

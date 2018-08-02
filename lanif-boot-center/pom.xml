@@ -4,34 +4,32 @@
 	<parent>
 		<groupId>com.lanif</groupId>
 		<artifactId>lanif-boot</artifactId>
-		<version>1.0.0</version>
+		<version>${lanif-boot.version}</version>
 	</parent>
 	<artifactId>lanif-boot-center</artifactId>
-	<properties>
-		<hystrix.version>1.5.12</hystrix.version>
-	</properties>
+	<packaging>jar</packaging>
+	<name>lanif-boot-center</name>
+	<description>server register center</description>
+
 	<dependencies>
-		<!--增加eureka-server的依赖 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-netflix-eureka-server</artifactId>
+			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>de.codecentric</groupId>
-			<artifactId>spring-boot-admin-starter-client</artifactId>
-			<version>2.0.1</version>
+			<artifactId>spring-cloud-starter-security</artifactId>
 		</dependency>
 	</dependencies>
+
 	<build>
-		<finalName>ace-center</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<finalName>${project.name}</finalName>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
